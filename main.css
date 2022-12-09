@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --blue: #00b8b8;
+    --grad1: rgb(210, 74, 168);
+    --grad2: rgb(153, 195, 91);
+    /* --blue: #00b8b8; */
+    ---bright-color: rgb(136, 27, 27);
+    --black: rgb(110, 109, 109);
+    --white: whit;
+    --light-color: rgb(168, 168, 168);
+    --light-bg: #eee;
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Russo One',
+        sans-serif;
+
+    /* font-family: " Montserrat-Regular",
+        sans-serif; */
+    text-decoration: none !important;
+    list-style: none;
+}
+
+body {
+    color: var(--light-bg);
+    background-color: rgba(10, 25, 47, 0.996);
+}
+
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+header {
+    font-size: .92em;
+    font-weight: 100;
+    line-height: 1.6;
+    padding: 3rem;
+}
+
+nav {
+    display: flex;
+    color: var(--light-bg);
+    justify-content: space-between;
+}
+
+nav a {
+    color: var(--light-bg);
+}
+
+p {
+    font-weight: 100;
+    margin: 1rem 0;
+    color: #D1D1B3;
+}
+
+.container-icons ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
+    margin: 10px;
+    background-image: linear-gradient(to right, var(--grad2)0%, var(--grad1)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+.container-icons ul li {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+}
+
+.inner {
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.inner::before {
+    content: " ";
+    left: 2rem;
+    width: 2px;
+    height: 200px;
+    position: absolute;
+    background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
+    /* position: absolute; */
+}
+
+.project p {
+    font-size: 2rem;
+    padding-top: 0rem;
+}
+
+.more p {
+    font-size: 2rem;
+    padding-top: 0rem;
+}
+
+a {
+    color: var(--light-bg);
+    text-transform: capitalize;
+}
+
+.pro-inner {
+    padding-top: 1.2rem;
+    background-color: rgba(10, 25, 47, 0.996);
+    z-index: 1000;
+    border-top: 2px solid var(--grad1);
+}
+
+.pro-inner a {
+    padding-bottom: .3rem;
+    border-bottom: 1px solid var(--grad1);
+}
+
+.pro-inner a:hover {
+    transition: .4s ease-out;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.pro-inner::before {
+    content: " ";
+    width: 2px;
+    margin-left: -2rem;
+    height: 200px;
+    position: absolute;
+    background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
+}
+
+.gradient1 {
+    stop-color: var(--grad1);
+    transition: all .3s ease-in-out
+}
+
+.gradient2 {
+    stop-color: var(--grad2);
+    transition: all .3s ease-in-out;
+}
+
+.content {
+    top: 0;
+    padding-right: 8rem;
+    width: 60%;
+}
+
+.top-svg {
+    position: absolute;
+}
+
+.down-svg svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.name svg {
+    font-family: 'Russo One', sans-serif;
+    position: relative;
+}
+
+.name svg text {
+    animation: stroke 5s;
+    stroke-width: 2;
+    stroke: #dce3f0;
+    font-size: 70px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: transparent;
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 1;
+    }
+
+    70% {
+        fill: transparent;
+        stroke: rgb(160, 114, 54);
+    }
+
+    80% {
+        fill: var(--white);
+        stroke: rgb(160, 132, 54);
+        stroke-width: 1;
+    }
+
+    100% {
+        fill: rgb(204, 195, 72);
+        stroke: rgba(248, 63, 7, 0.996);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .main {
+        display: block;
+    }
+
+    .content {
+        top: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .down-svg {
+        position: relative;
+        margin-bottom: -10rem;
+    }
+
+    header {
+        padding: 2rem;
+    }
+}
