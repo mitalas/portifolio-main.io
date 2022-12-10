@@ -55,34 +55,30 @@
                                     <i class="fab fa-github"></i>
                                 </a>
                             </li>
-                            <li id="reset3">
+                            <!-- <li id="reset3">
                                 <a href="http://wa.me/message/7HZEAZAS34YTB1" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-whatsapp"></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </nav>
                 <div class="main">
                     <div class="content">
                         <div class="name"> <svg viewBox="0 0 1320 300">
-                                <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                                <text x="24%" y="80%" dy=".35em" text-anchor="middle">
                                     Mitala Samuel </text>
                             </svg></div>
                         <div class="inner">
                             <p>My name is <span> Mitala Samuel</span>, I'm a front-end developer based in Kira,
-                                Kampala, Uganda. I have
-                                developed many types of front-ends from well know DJ applications to Ecommerce booking
+                                Kampala, Uganda. I have developed many types of front-ends from well know small
+                                applications to Ecommerce booking
                                 platforms.</p>
                             <p>I'm passionate about cutting-edge, pixel-perfect, beautiful interfaces and
                                 intuitively implemented UX. </p>
                             <div class="more">
-                                <p>More</p>
                                 <ul>
                                     <li id="reset1"><a href="about.html">about</a>
-                                    </li>
-                                    <li><a href="projects.html">work</a></li>
-                                    <li id="play"><a href="/Mitala-resume.pdf">Resume</a>
                                     </li>
                                     <li id="reset"><a href="contact.html">contact</a>
                                     </li>
@@ -107,7 +103,11 @@
                             </ul>
                         </section>
                     </div>
-                </div>
+                </div><!-- footer section starts  -->
+                <sectiobn class="footer">
+                    <div class="credit"> &copy;2022. Designed by <span>Mitala Samuel</span> </div>
+                </sectiobn>
+                <!-- footer section ends -->
             </header>
             <div class="down-svg">
                 <svg width="300" height="300" data-name="corner-bottom-right" xmlns="http://www.w3.org/2000/svg"
@@ -125,110 +125,7 @@
             </div>
         </div>
     </div>
-    <script src="asset/js/main.js" defer></script>
-    <audio id="heartbeat" src="Notification.mp3" preload="auto">
-        Your browser does not support the <code>audio</code> element.
-    </audio>
-    <!-- <audio id="sound" src="Notification.mp3"></audio> -->
-    <script>
-        var playBtn = document.getElementById('play'),
-            resetBtn = document.getElementById('reset'),
-            play1Btn = document.getElementById('play1'),
-            reset1Btn = document.getElementById('reset1'),
-            hearbeat = document.getElementById('heartbeat')
-        audios = document.querySelectorAll('audio');
-        console.log(audios);
-
-
-        playBtn.addEventListener('mouseover', function () {
-            [].forEach.call(audios, function (audio) {
-                // do whatever
-                audio.play();
-            });
-        }, false);
-
-        playBtn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-
-        resetBtn.addEventListener('mouseover', function () {
-            heartbeat.play();
-        }, false);
-
-        resetBtn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-        play1Btn.addEventListener('mouseover', function () {
-            [].forEach.call(audios, function (audio) {
-                // do whatever
-                audio.play();
-            });
-        }, false);
-
-        play1Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-
-        reset1Btn.addEventListener('mouseover', function () {
-            heartbeat.play();
-        }, false);
-
-        reset1Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-    </script>
-    <!-- icons -->
-    <script>
-        var play2Btn = document.getElementById('play2'),
-            reset2Btn = document.getElementById('reset2'),
-            play3Btn = document.getElementById('play3'),
-            reset3Btn = document.getElementById('reset3');
-
-        play2Btn.addEventListener('mouseover', function () {
-            [].forEach.call(audios, function (audio) {
-                // do whatever
-                audio.play();
-            });
-        }, false);
-
-        play2Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-
-        reset2Btn.addEventListener('mouseover', function () {
-            heartbeat.play();
-        }, false);
-
-        reset2Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-        play3Btn.addEventListener('mouseover', function () {
-            [].forEach.call(audios, function (audio) {
-                // do whatever
-                audio.play();
-            });
-        }, false);
-
-        play3Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-
-        reset3Btn.addEventListener('mouseover', function () {
-            heartbeat.play();
-        }, false);
-
-        reset3Btn.addEventListener('mouseleave', function () {
-            heartbeat.pause();
-            heartbeat.currentTime = 0;
-        }, false);
-    </script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

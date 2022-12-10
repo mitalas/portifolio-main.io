@@ -7,6 +7,8 @@
    --black: rgb(110, 109, 109);
    --white: rgb(16, 24, 31);
    --light-color: rgb(168, 168, 168);
+   --grad1: rgb(210, 74, 168);
+   --grad2: rgb(153, 195, 91);
    --light-bg: #eee;
    --border: .2rem solid rgba(0, 0, 0, .1);
    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -136,12 +138,16 @@ section {
    z-index: 1000;
 }
 
-.header .logo {
-   font-family: "Fjalla One",
+.header .logo p a {
+   /* font-family: "Fjalla One",
       sans-serif;
-   text-transform: capitalize;
-   font-size: 2rem;
-   color: var(--black);
+      */
+   font-family: 'Poppins',
+      sans-serif;
+   font-size: 1.8rem;
+   background-image: linear-gradient(to right, var(--grad2)0%, var(--grad1)100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 .header .logo span {
@@ -236,11 +242,7 @@ ul dl a:hover {
 .about {
    font-family: 'Poppins',
       sans-serif;
-   /* font-family: "Satoshi Black",
-      Sans-serif; */
-   font-weight: 100;
-   /* font-family: 'Poppins',
-      sans-serif; */
+   font-weight: 400;
    margin-top: -70px;
 }
 
@@ -469,7 +471,7 @@ ul dl a:hover {
 .footer .credit {
    text-align: center;
    border-top: var(--border);
-   padding-top: 1.5rem;
+   padding-top: 1rem;
    font-size: 1.5rem;
    margin-bottom: 10px;
    color: var(--light-color);

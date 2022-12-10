@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
     --blue: #00b8b8;
@@ -20,8 +21,10 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    font-family: 'Russo One',
+    font-family: 'Poppins',
         sans-serif;
+    /* font-family: 'Russo One',
+        sans-serif; */
 
     /* font-family: " Montserrat-Regular",
         sans-serif; */
@@ -56,7 +59,7 @@ html {
 
 header {
     font-size: .92em;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1.6;
     padding: 3rem;
 }
@@ -72,7 +75,7 @@ nav a {
 }
 
 p {
-    font-weight: 100;
+    font-weight: 400;
     margin: 1rem 0;
     color: #D1D1B3;
 }
@@ -83,7 +86,6 @@ p {
 }
 
 .logo h1 {
-    background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
     margin: 10px;
     background-image: linear-gradient(to right, var(--grad2)0%, var(--grad1)100%);
     -webkit-background-clip: text;
@@ -101,16 +103,29 @@ p {
     display: flex;
 }
 
+span {
+    text-align: center;
+    color: var(--blue);
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
 .inner {
-    margin-top: 3rem;
+    margin-top: 0rem;
     margin-left: 2rem;
+}
+
+.inner a:hover {
+    transition: .4s ease-out;
+    letter-spacing: .1rem;
+    font-weight: 600;
 }
 
 .inner::before {
     content: " ";
     left: 2rem;
     width: 2px;
-    height: 200px;
+    height: 220px;
     position: absolute;
     background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
     /* position: absolute; */
@@ -135,12 +150,14 @@ a {
     padding-top: 1.2rem;
     background-color: rgba(10, 25, 47, 0.996);
     z-index: 1000;
+    display: inline;
+    padding-left: 2rem;
     border-top: 2px solid var(--grad1);
 }
 
 .pro-inner a {
+    padding-left: 1rem;
     padding-bottom: .3rem;
-    border-bottom: 1px solid var(--grad1);
 }
 
 .pro-inner a:hover {
@@ -152,8 +169,8 @@ a {
 .pro-inner::before {
     content: " ";
     width: 2px;
-    margin-left: -2rem;
-    height: 200px;
+    margin-left: -3rem;
+    height: 150px;
     position: absolute;
     background: linear-gradient(0deg, var(--grad2)0%, var(--grad1)100%);
 }
@@ -185,8 +202,8 @@ a {
 }
 
 .name svg {
+    text-align: left;
     font-family: 'Russo One', sans-serif;
-    position: relative;
 }
 
 .name svg text {
@@ -225,6 +242,20 @@ a {
     }
 }
 
+.footer .credit {
+    text-align: end;
+    border-top: var(--border);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--light-color);
+}
+
+.footer .credit span {
+    color: var(--blue);
+}
+
+
 @media (max-width:768px) {
     .main {
         display: block;
@@ -236,6 +267,16 @@ a {
         width: 100%;
     }
 
+    .name svg text {
+        font-size: 5.4rem;
+    }
+
+    .pro-inner,
+    .inner {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
     .down-svg {
         position: relative;
         margin-bottom: -10rem;
@@ -243,5 +284,9 @@ a {
 
     header {
         padding: 2rem;
+    }
+
+    .footer .credit {
+        text-align: center;
     }
 }

@@ -24,8 +24,8 @@ window.onscroll = () => {
       header.classList.add('active');
    } else {
       header.classList.remove('active');
-   }
-}
+   }}
+// }
 window.addEventListener('load', reveal);
 
 function reveal() {
